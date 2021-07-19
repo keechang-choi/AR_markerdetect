@@ -18,6 +18,9 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="detect_markers.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <ProjectGuid>{74F257EA-F399-464D-9ED6-5F24AD807472}</ProjectGuid>
@@ -94,7 +97,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <AdditionalLibraryDirectories>$(OPENCV_DIR)\lib\Debug;$(OPENCV_DIR)\lib\Release;$(ArUco_DIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opencv_core452d.lib;opencv_highgui452d.lib;opencv_flann452d.lib;opencv_imgcodecs452d.lib;aruco3112.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opencv_core452d.lib;opencv_highgui452d.lib;opencv_flann452d.lib;opencv_imgcodecs452d.lib;opencv_videoio452d.lib;opencv_aruco452d.lib;opencv_calib3d452d.lib;opencv_imgproc452d.lib;aruco3112.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -132,9 +135,6 @@
       <AdditionalDependencies>opencv_core452.lib;opencv_highgui452.lib;opencv_flann452.lib;opencv_imgcodecs452.lib;aruco3112.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="main.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
