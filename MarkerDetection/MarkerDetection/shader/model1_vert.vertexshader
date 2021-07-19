@@ -1,0 +1,24 @@
+#version 330 core
+
+// vertex shader
+layout(location = 0) in vec3 v_pos;
+layout(location = 1) in vec3 v_normal;
+layout(location = 2) in vec2 uv_vert_in;
+
+
+// output values that will be interpolated per-fragment
+out vec3 f_pos;
+out vec3 f_normal;
+out vec2 uv_vert_out;
+
+uniform mat4 Model;
+uniform mat4 View;
+uniform mat4 Proj;
+
+void main(){
+  f_pos = vec3(Model * vec4(v_pos, 1.0));
+  f_normal = mat3(transpose(inverse(Model))) * v_normal;
+  uv_vert_out = uv_vert_in;
+  gl_Position = Proj * View * vec4(f_pos, 1.0);
+  //gl_Position= Proj * View *Model * vec4(v_pos,1.0);
+}

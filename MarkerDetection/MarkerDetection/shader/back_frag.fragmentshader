@@ -1,0 +1,11 @@
+#version 330 core
+
+out vec4 fragment_color;
+
+in vec2 uv_vert_out;
+
+uniform sampler2D camera_texture;
+
+void main(){
+  fragment_color = texture(camera_texture, uv_vert_out);
+}

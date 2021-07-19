@@ -1,0 +1,14 @@
+#version 330 core
+layout(location = 0) in vec3 pos;
+layout(location = 1) in vec2 uv_vert_in;
+
+
+out vec2 uv_vert_out;
+
+uniform mat4 MV_bg;
+uniform mat4 Proj_bg;
+
+void main(){
+  gl_Position = Proj_bg * MV_bg * vec4(pos,1.0);
+  uv_vert_out = vec2(uv_vert_in.x, 1.0-uv_vert_in.y);
+}
