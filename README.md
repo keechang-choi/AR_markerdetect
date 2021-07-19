@@ -9,12 +9,12 @@
 - Cam : app(droidCam) + mobile phone
 
 ## Reference
-- https://docs.opencv.org/4.5.2/d5/dae/tutorial_aruco_detection.html 
-- https://docs.opencv.org/4.5.2/da/d13/tutorial_aruco_calibration.html
-- https://github.com/ramkalath/Augmented_Reality_Tutorials
-- https://learnopengl.com/Lighting/Multiple-lights
-- http://www.opengl-tutorial.org/
-
+- aruco : https://docs.opencv.org/4.5.2/d5/dae/tutorial_aruco_detection.html 
+- aruco : https://docs.opencv.org/4.5.2/da/d13/tutorial_aruco_calibration.html
+- AR : https://github.com/ramkalath/Augmented_Reality_Tutorials
+- GLSL : https://learnopengl.com/Lighting/Multiple-lights
+- OpenGL : http://www.opengl-tutorial.org/
+- free model obj : https://www.cgtrader.com/free-3d-models/space/spaceship/star-sparrow-modular-spaceship
 ## Task
 ### calibration
 - init_calibrate.cpp --> using chessboard(charuco)and sample code, camera intrinsic information
